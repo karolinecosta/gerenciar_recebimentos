@@ -1,0 +1,3 @@
+Nome, QtdItens, ValorVendido, SalarioFixo, ComissaoFixa
+Joao, 20,2800.00, 1200.00, 140.00
+Maria, 15, 1500.00, 1300.00, 100.00

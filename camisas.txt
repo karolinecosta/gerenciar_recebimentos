@@ -1,0 +1,4 @@
+NomeCliente, QtdComprada
+Carlos, 5
+Ana, 12
+Marcos, 20
