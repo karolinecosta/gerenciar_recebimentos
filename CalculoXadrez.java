@@ -8,14 +8,14 @@ import java.time.format.DateTimeFormatter;
 
 public class CalculoXadrez {
     public static void main(String[] args) {
-        String arquivo = "questao4/xadrez.txt";
+        String arquivo = "xadrez.txt";
         String linha;
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
 
         try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
             br.readLine(); // Pular a primeira linha de cabeçalho
-            try (FileWriter fw = new FileWriter("questao4/saida.txt")) {
+            try (FileWriter fw = new FileWriter("saida.txt")) {
                 fw.write("Núm. Partida | Início | Término | Tempo Total\n");
                 while ((linha = br.readLine()) != null) {
                     String[] valores = linha.split(",");
