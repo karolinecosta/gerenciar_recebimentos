@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class CalculoCamisas {
     public static void main(String[] args) {
-        String arquivo = "camisas.txt";
+        String arquivo = "questao3/camisas.txt";
         String linha;
 
         int totalCamisasVendidas = 0;
@@ -13,7 +13,7 @@ public class CalculoCamisas {
 
         try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
             br.readLine(); 
-            try (FileWriter fw = new FileWriter("saida.txt")) {
+            try (FileWriter fw = new FileWriter("questao3/saida.txt")) {
                 fw.write("Nome do Cliente | Qtd Comprada | Valor Aplicado | Valor Venda\n");
                 while ((linha = br.readLine()) != null) {
                     String[] valores = linha.split(",");
