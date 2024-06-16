@@ -9,12 +9,12 @@ public class TrocaValores {
         String linha;
 
         try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
-            br.readLine(); 
-            linha = br.readLine(); 
+            br.readLine(); // Skip the header line
+            linha = br.readLine(); // Read the data line
             if (linha != null) {
                 String[] valores = linha.split(",");
-                int a = Integer.parseInt(valores[0]);
-                int b = Integer.parseInt(valores[1]);
+                int a = Integer.parseInt(valores[0].trim());
+                int b = Integer.parseInt(valores[1].trim());
 
                 // Trocar os valores
                 int temp = a;
@@ -24,7 +24,7 @@ public class TrocaValores {
                 // Gerar arquivo de saída
                 try (FileWriter fw = new FileWriter("saida.txt")) {
                     fw.write("Valor Origem de A | Valor Origem de B | Valor Final de A | Valor Final de B\n");
-                    fw.write(valores[0] + " " + valores[1] + " " + a + " " + b + "\n");
+                    fw.write(valores[0].trim() + " " + valores[1].trim() + " " + a + " " + b + "\n");
                 }
             }
         } catch (IOException e) {
