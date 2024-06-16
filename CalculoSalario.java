@@ -5,12 +5,12 @@ import java.io.IOException;
 
 public class CalculoSalario {
     public static void main(String[] args) {
-        String arquivo = "questao2/vendedores.txt";
+        String arquivo = "vendedores.txt";
         String linha;
 
         try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
             br.readLine(); 
-            try (FileWriter fw = new FileWriter("questao2/saida.txt")) {
+            try (FileWriter fw = new FileWriter("saida.txt")) {
                 fw.write("Vendedor | Qtd Itens | Valor Vendido | Valor Comissão | Salário | Salário Final\n");
                 while ((linha = br.readLine()) != null) {
                     String[] valores = linha.split(",");
