@@ -16,20 +16,20 @@ app.post('/execute', (req, res) => {
 
     switch (questionNumber) {
         case 1:
-            command = 'javac questao1/TrocaValores.java && java -cp questao1 TrocaValores';
-            outputFile = 'questao1/saida.txt';
+            command = 'javac TrocaValores.java && java -cp TrocaValores';
+            outputFile = 'saida.txt';
             break;
         case 2:
-            command = 'javac questao2/CalculoSalario.java && java -cp questao2 CalculoSalario';
-            outputFile = 'questao2/saida.txt';
+            command = 'javac CalculoSalario.java && java -cp CalculoSalario';
+            outputFile = 'saida.txt';
             break;
         case 3:
-            command = 'javac questao3/CalculoCamisas.java && java -cp questao3 CalculoCamisas';
-            outputFile = 'questao3/saida.txt';
+            command = 'javac CalculoCamisas.java && java -cp CalculoCamisas';
+            outputFile = 'saida.txt';
             break;
         case 4:
-            command = 'javac questao4/CalculoXadrez.java && java -cp questao4 CalculoXadrez';
-            outputFile = 'questao4/saida.txt';
+            command = 'javac CalculoXadrez.java && java -cp CalculoXadrez';
+            outputFile = 'saida.txt';
             break;
         default:
             res.status(400).send('Questão inválida');
