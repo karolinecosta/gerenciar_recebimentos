@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class TrocaValores {
     public static void main(String[] args) {
-        String arquivo = "questao1/variaveis.txt";
+        String arquivo = "variaveis.txt";
         String linha;
 
         try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
@@ -22,7 +22,7 @@ public class TrocaValores {
                 b = temp;
 
                 // Gerar arquivo de saída
-                try (FileWriter fw = new FileWriter("questao1/saida.txt")) {
+                try (FileWriter fw = new FileWriter("saida.txt")) {
                     fw.write("Valor Origem de A | Valor Origem de B | Valor Final de A | Valor Final de B\n");
                     fw.write(valores[0] + " " + valores[1] + " " + a + " " + b + "\n");
                 }
